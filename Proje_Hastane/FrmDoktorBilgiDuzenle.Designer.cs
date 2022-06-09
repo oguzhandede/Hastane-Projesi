@@ -29,6 +29,7 @@ namespace Proje_Hastane
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorBilgiDuzenle));
             this.BtnBilgiGuncelle = new System.Windows.Forms.Button();
             this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@ namespace Proje_Hastane
             // 
             // BtnBilgiGuncelle
             // 
+            this.BtnBilgiGuncelle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnBilgiGuncelle.BackColor = System.Drawing.Color.Black;
             this.BtnBilgiGuncelle.ForeColor = System.Drawing.Color.White;
             this.BtnBilgiGuncelle.Location = new System.Drawing.Point(20, 218);
@@ -52,6 +54,7 @@ namespace Proje_Hastane
             this.BtnBilgiGuncelle.TabIndex = 43;
             this.BtnBilgiGuncelle.Text = "Bilgileri Guncelle";
             this.BtnBilgiGuncelle.UseVisualStyleBackColor = false;
+            this.BtnBilgiGuncelle.Click += new System.EventHandler(this.BtnBilgiGuncelle_Click);
             // 
             // TxtSoyad
             // 
@@ -153,6 +156,7 @@ namespace Proje_Hastane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(286, 291);
             this.Controls.Add(this.TxtSifre);
@@ -168,9 +172,12 @@ namespace Proje_Hastane
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimizeBox = false;
             this.Name = "FrmDoktorBilgiDuzenle";
-            this.Text = "FrmDoktorBilgiDuzenle";
+            this.Text = "Doktor Bilgi Duzenle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

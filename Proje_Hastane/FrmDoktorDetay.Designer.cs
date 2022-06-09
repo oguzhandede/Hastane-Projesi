@@ -29,25 +29,26 @@ namespace Proje_Hastane
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAdSoyad = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblTc = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rchSikayet = new System.Windows.Forms.RichTextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnDuyurular = new System.Windows.Forms.Button();
-            this.btnCikis = new System.Windows.Forms.Button();
-            this.btnInternet = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnCikis = new System.Windows.Forms.Button();
+            this.btnDuyurular = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -72,15 +73,6 @@ namespace Proje_Hastane
             this.lblAdSoyad.TabIndex = 8;
             this.lblAdSoyad.Text = "Null ";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 25);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Ad Soyad";
-            // 
             // lblTc
             // 
             this.lblTc.AutoSize = true;
@@ -89,6 +81,15 @@ namespace Proje_Hastane
             this.lblTc.Size = new System.Drawing.Size(144, 25);
             this.lblTc.TabIndex = 6;
             this.lblTc.Text = "00000000000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 25);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Ad Soyad";
             // 
             // label3
             // 
@@ -109,6 +110,15 @@ namespace Proje_Hastane
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Detay";
             // 
+            // rchSikayet
+            // 
+            this.rchSikayet.Location = new System.Drawing.Point(6, 30);
+            this.rchSikayet.Name = "rchSikayet";
+            this.rchSikayet.Size = new System.Drawing.Size(244, 118);
+            this.rchSikayet.TabIndex = 0;
+            this.rchSikayet.Text = "";
+            this.rchSikayet.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
@@ -119,19 +129,20 @@ namespace Proje_Hastane
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Listesi";
             // 
-            // rchSikayet
+            // dataGridView1
             // 
-            this.rchSikayet.Location = new System.Drawing.Point(6, 30);
-            this.rchSikayet.Name = "rchSikayet";
-            this.rchSikayet.Size = new System.Drawing.Size(244, 118);
-            this.rchSikayet.TabIndex = 0;
-            this.rchSikayet.Text = "";
-            this.rchSikayet.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(409, 412);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.btnCikis);
-            this.groupBox4.Controls.Add(this.btnInternet);
             this.groupBox4.Controls.Add(this.btnDuyurular);
             this.groupBox4.Controls.Add(this.btnGuncelle);
             this.groupBox4.Location = new System.Drawing.Point(12, 283);
@@ -140,28 +151,6 @@ namespace Proje_Hastane
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Hızlı Erişim";
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
-            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(11, 30);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(110, 59);
-            this.btnGuncelle.TabIndex = 4;
-            this.btnGuncelle.Text = "Bilgi Düzenle";
-            this.btnGuncelle.UseVisualStyleBackColor = false;
-            // 
-            // btnDuyurular
-            // 
-            this.btnDuyurular.BackColor = System.Drawing.Color.Black;
-            this.btnDuyurular.ForeColor = System.Drawing.Color.White;
-            this.btnDuyurular.Location = new System.Drawing.Point(127, 30);
-            this.btnDuyurular.Name = "btnDuyurular";
-            this.btnDuyurular.Size = new System.Drawing.Size(123, 59);
-            this.btnDuyurular.TabIndex = 5;
-            this.btnDuyurular.Text = "Duyurular";
-            this.btnDuyurular.UseVisualStyleBackColor = false;
             // 
             // btnCikis
             // 
@@ -173,31 +162,49 @@ namespace Proje_Hastane
             this.btnCikis.TabIndex = 7;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
-            // btnInternet
+            // btnDuyurular
             // 
-            this.btnInternet.BackColor = System.Drawing.Color.Black;
-            this.btnInternet.ForeColor = System.Drawing.Color.White;
-            this.btnInternet.Location = new System.Drawing.Point(11, 95);
-            this.btnInternet.Name = "btnInternet";
-            this.btnInternet.Size = new System.Drawing.Size(110, 59);
-            this.btnInternet.TabIndex = 6;
-            this.btnInternet.Text = "İnternet";
-            this.btnInternet.UseVisualStyleBackColor = false;
+            this.btnDuyurular.BackColor = System.Drawing.Color.Black;
+            this.btnDuyurular.ForeColor = System.Drawing.Color.White;
+            this.btnDuyurular.Location = new System.Drawing.Point(127, 30);
+            this.btnDuyurular.Name = "btnDuyurular";
+            this.btnDuyurular.Size = new System.Drawing.Size(123, 59);
+            this.btnDuyurular.TabIndex = 5;
+            this.btnDuyurular.Text = "Duyurular";
+            this.btnDuyurular.UseVisualStyleBackColor = false;
+            this.btnDuyurular.Click += new System.EventHandler(this.btnDuyurular_Click);
             // 
-            // dataGridView1
+            // btnGuncelle
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(409, 412);
-            this.dataGridView1.TabIndex = 0;
+            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(11, 30);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(110, 59);
+            this.btnGuncelle.TabIndex = 4;
+            this.btnGuncelle.Text = "Bilgi Düzenle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(11, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 59);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Üye giriş dön";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmDoktorDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(698, 467);
             this.Controls.Add(this.groupBox4);
@@ -205,16 +212,19 @@ namespace Proje_Hastane
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimizeBox = false;
             this.Name = "FrmDoktorDetay";
             this.Text = "FrmDoktorDetay";
+            this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -232,8 +242,8 @@ namespace Proje_Hastane
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.Button btnInternet;
         private System.Windows.Forms.Button btnDuyurular;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -19,7 +19,7 @@ namespace Proje_Hastane
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmHastaGiris fr = new FrmHastaGiris();
+            frmHastaGiris fr = new frmHastaGiris();
             fr.Show();
             this.Hide();
 
@@ -32,7 +32,7 @@ namespace Proje_Hastane
 
         private void btnDoktorGirisi_Click(object sender, EventArgs e)
         {
-            FrmDoktorGiris fr = new FrmDoktorGiris();
+            frmDoktroGiris fr = new frmDoktroGiris();
             fr.Show();
             this.Hide();
         }

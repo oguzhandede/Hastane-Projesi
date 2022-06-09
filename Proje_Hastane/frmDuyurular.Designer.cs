@@ -35,8 +35,10 @@ namespace Proje_Hastane
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(517, 337);
@@ -50,10 +52,11 @@ namespace Proje_Hastane
             this.ClientSize = new System.Drawing.Size(517, 337);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDuyurular";
             this.Text = "frmDuyurular";
+            this.Load += new System.EventHandler(this.frmDuyurular_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

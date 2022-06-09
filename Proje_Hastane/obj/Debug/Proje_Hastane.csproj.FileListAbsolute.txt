@@ -11,7 +11,6 @@ C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.F
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.frmBrans.resources
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.FrmDoktorBilgiDuzenle.resources
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.FrmDoktorDetay.resources
-C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.FrmDoktorGiris.resources
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.frmDoktorPaneli.resources
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.frmDuyurular.resources
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.FrmGirisler.resources
@@ -21,3 +20,4 @@ C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.F
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.frmRandevuListesi.resources
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.frmSekreterDetay.resources
 C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.frmSekreterGiris.resources
+C:\Users\DEDE\source\repos\Proje_Hastane\Proje_Hastane\obj\Debug\Proje_Hastane.frmDoktroGiris.resources

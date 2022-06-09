@@ -70,17 +70,17 @@
     <Compile Include="FrmDoktorDetay.Designer.cs">
       <DependentUpon>FrmDoktorDetay.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDoktorGiris.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDoktorGiris.Designer.cs">
-      <DependentUpon>FrmDoktorGiris.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDoktorPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDoktorPaneli.Designer.cs">
       <DependentUpon>frmDoktorPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoktroGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoktroGiris.Designer.cs">
+      <DependentUpon>frmDoktroGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDuyurular.cs">
       <SubType>Form</SubType>
@@ -100,11 +100,14 @@
     <Compile Include="FrmHastaDetay.Designer.cs">
       <DependentUpon>FrmHastaDetay.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHastaGiris.cs">
+    <EmbeddedResource Include="frmDoktroGiris.resx">
+      <DependentUpon>frmDoktroGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="frmHastaGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHastaGiris.Designer.cs">
-      <DependentUpon>FrmHastaGiris.cs</DependentUpon>
+    <Compile Include="frmHastaGiris.Designer.cs">
+      <DependentUpon>frmHastaGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRandevuListesi.cs">
       <SubType>Form</SubType>
@@ -145,9 +148,6 @@
     <EmbeddedResource Include="FrmDoktorDetay.resx">
       <DependentUpon>FrmDoktorDetay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDoktorGiris.resx">
-      <DependentUpon>FrmDoktorGiris.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDoktorPaneli.resx">
       <DependentUpon>frmDoktorPaneli.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,8 +160,8 @@
     <EmbeddedResource Include="FrmHastaDetay.resx">
       <DependentUpon>FrmHastaDetay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHastaGiris.resx">
-      <DependentUpon>FrmHastaGiris.cs</DependentUpon>
+    <EmbeddedResource Include="frmHastaGiris.resx">
+      <DependentUpon>frmHastaGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHastaKayıt.resx">
       <DependentUpon>FrmHastaKayıt.cs</DependentUpon>

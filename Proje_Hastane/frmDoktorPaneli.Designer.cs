@@ -29,6 +29,7 @@ namespace Proje_Hastane
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoktorPaneli));
             this.label3 = new System.Windows.Forms.Label();
             this.cmbBrans = new System.Windows.Forms.ComboBox();
             this.txtAd = new System.Windows.Forms.TextBox();
@@ -61,14 +62,15 @@ namespace Proje_Hastane
             this.cmbBrans.Location = new System.Drawing.Point(96, 86);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(100, 33);
-            this.cmbBrans.TabIndex = 22;
+            this.cmbBrans.TabIndex = 3;
+            this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             // 
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(96, 12);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 31);
-            this.txtAd.TabIndex = 23;
+            this.txtAd.TabIndex = 1;
             // 
             // label1
             // 
@@ -103,7 +105,7 @@ namespace Proje_Hastane
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(100, 31);
-            this.mskTc.TabIndex = 27;
+            this.mskTc.TabIndex = 4;
             this.mskTc.ValidatingType = typeof(System.DateTime);
             // 
             // label5
@@ -120,22 +122,25 @@ namespace Proje_Hastane
             this.txtSoyad.Location = new System.Drawing.Point(96, 49);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 31);
-            this.txtSoyad.TabIndex = 29;
+            this.txtSoyad.TabIndex = 2;
             // 
             // txtSifre
             // 
             this.txtSifre.Location = new System.Drawing.Point(96, 162);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(100, 31);
-            this.txtSifre.TabIndex = 30;
+            this.txtSifre.TabIndex = 5;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(202, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(308, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(672, 300);
             this.dataGridView1.TabIndex = 31;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnEkle
             // 
@@ -144,7 +149,7 @@ namespace Proje_Hastane
             this.btnEkle.Location = new System.Drawing.Point(21, 210);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(82, 48);
-            this.btnEkle.TabIndex = 33;
+            this.btnEkle.TabIndex = 6;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnDoktorPanel_Click);
@@ -156,9 +161,10 @@ namespace Proje_Hastane
             this.btnSil.Location = new System.Drawing.Point(109, 210);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(87, 48);
-            this.btnSil.TabIndex = 34;
+            this.btnSil.TabIndex = 7;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -167,16 +173,18 @@ namespace Proje_Hastane
             this.btnGuncelle.Location = new System.Drawing.Point(21, 264);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(175, 48);
-            this.btnGuncelle.TabIndex = 35;
+            this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // frmDoktorPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(526, 327);
+            this.ClientSize = new System.Drawing.Size(886, 327);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -192,9 +200,12 @@ namespace Proje_Hastane
             this.Controls.Add(this.cmbBrans);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
             this.Name = "frmDoktorPaneli";
-            this.Text = "frmDoktorPaneli";
+            this.Text = "Doktor Paneli";
+            this.Load += new System.EventHandler(this.frmDoktorPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
