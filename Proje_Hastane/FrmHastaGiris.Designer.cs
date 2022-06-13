@@ -29,6 +29,7 @@ namespace Proje_Hastane
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHastaGiris));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtsifre = new System.Windows.Forms.TextBox();
             this.msktc = new System.Windows.Forms.MaskedTextBox();
@@ -119,6 +120,7 @@ namespace Proje_Hastane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(499, 233);
             this.Controls.Add(this.btnGirisyap);
@@ -129,7 +131,9 @@ namespace Proje_Hastane
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimizeBox = false;
             this.Name = "frmHastaGiris";
             this.Text = "frmHastaGiris";
             this.ResumeLayout(false);
